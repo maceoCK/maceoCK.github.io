@@ -1,0 +1,15 @@
+.container {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    margin-inline: 50px;
+    gap: 50px;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

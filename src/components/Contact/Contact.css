@@ -1,0 +1,22 @@
+.buttonBorder1 {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.buttonBorder2 {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.buttonBorder3 {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 4px;
+}
+.socialMediaContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

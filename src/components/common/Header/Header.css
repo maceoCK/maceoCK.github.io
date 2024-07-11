@@ -1,0 +1,17 @@
+.Link {
+    text-decoration: none;
+    color: black;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.button {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}

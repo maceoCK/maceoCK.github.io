@@ -1,0 +1,41 @@
+.bulletin-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffeed3;
+    width: 100%;
+    height: 40vw;
+    border-radius: 20px;
+}
+
+.bulletin-board-title-text {
+    color: #362915;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.bulletin-container {
+    position: relative;
+    
+    width: 90%;
+    height: 90%;
+    margin: 30px;
+    margin-top: 0;
+    background-image: url('../../assets/cork.jpg');
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-title {
+    align-self: flex-start;
+    margin: 0;
+}
