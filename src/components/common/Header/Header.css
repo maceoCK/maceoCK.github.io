@@ -1,17 +1,35 @@
-.Link {
-    text-decoration: none;
-    color: black;
-}
+.header-container {
+    .Link {
+        text-decoration: none;
+        color: black;
+    }
 
-.title {
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
-.button {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
+    .title-container {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+        flex-grow: 1;
+    }
+
+    .title {
+        font-size: calc(1.2vw + 10px); /* Dynamically resizes with window size */
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    }
+
+    .button-container {
+        display: flex;
+        gap: 20px;
+        font-size: 20px;
+        align-items: center;
+    }
+
+    .button {
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    }
 }

@@ -1,0 +1,11 @@
+.projects-container {
+    .projects-title {
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

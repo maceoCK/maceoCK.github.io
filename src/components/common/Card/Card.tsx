@@ -58,25 +58,27 @@ const Card = forwardRef<HTMLDivElement, Project>(
         }, [color, accent]);
 
         return (
-            <motion.div
-                className="card"
-                layout
-                variants={variants}
-                initial="start"
-                animate="end"
-                whileHover="hover"
-                whileTap="dragging"
-                drag
-                dragConstraints={dragConstraints} // Use the passed dragConstraints directly
-                dragTransition={dragTransition}
-                {...rest}
-            >
-                <Icon size={32} />
-                <Link to={`${id}`}>
-                    <h2>{description}</h2>
-                </Link>
-                <p style={{ flex: 1 }}>{title}</p>
-            </motion.div>
+            <div className="card-container">
+                <motion.div
+                    className="card"
+                    layout
+                    variants={variants}
+                    initial="start"
+                    animate="end"
+                    whileHover="hover"
+                    whileTap="dragging"
+                    drag
+                    dragConstraints={dragConstraints} // Use the passed dragConstraints directly
+                    dragTransition={dragTransition}
+                    {...rest}
+                >
+                    <Icon size={32} />
+                    <Link to={`${id}`}>
+                        <h2>{description}</h2>
+                    </Link>
+                    <p style={{ flex: 1 }}>{title}</p>
+                </motion.div>
+            </div>
         );
     }
 );

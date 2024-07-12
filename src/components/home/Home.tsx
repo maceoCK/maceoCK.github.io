@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 
 const App: React.FC = () => {
     return (
-        <div>
+        <div className="home-container">
             <div className="info-container">
                 <div className="info">
                     <h1 className="info-title hello">Hello 👋</h1>

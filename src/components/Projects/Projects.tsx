@@ -3,6 +3,7 @@ import { Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import "./Projects.css";
 
 interface Project {
     id: string;
@@ -47,6 +48,9 @@ const Projects: React.FC<{ projectsRef: React.RefObject<HTMLDivElement> }> = ({
 
     return (
         <div ref={projectsRef} className="projects-container">
+            <div className="projects-title">
+                <h1>Projects</h1>
+            </div>
             <Grid container spacing={2}>
                 {projectsData.map((project, index) => (
                     <Grid
