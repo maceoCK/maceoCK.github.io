@@ -101,7 +101,14 @@ const Header: React.FC<HeaderProps> = ({
                         </Button>
                         <Button
                             className="button"
-                            onClick={() => scrollToRef(contactRef)}
+                            onClick={() => {
+                                if (contactRef.current) {
+                                    window.scrollTo({
+                                        top: contactRef.current.offsetTop,
+                                        behavior: "smooth",
+                                    });
+                                }
+                            }}
                             variant="outlined"
                             color="primary"
                             style={{

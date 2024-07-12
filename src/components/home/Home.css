@@ -23,7 +23,7 @@
 
 .profile-image-container {
     width: calc(20vw + 10px);
-    max-width: calc(20vw + 200px);
+    max-width: 400px;
     margin-left: calc(1vw + 10px);
 }
 
