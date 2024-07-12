@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({
     projectsRef,
     contactRef,
     topRef,
-}) => {
+}: HeaderProps) => {
     const [buttonSize, setButtonSize] = useState<ButtonProps["size"]>("large");
 
     useEffect(() => {
@@ -30,8 +30,10 @@ const Header: React.FC<HeaderProps> = ({
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const scrollToRef = (ref: any) => {
-        ref.current.scrollIntoView({ behavior: "smooth" });
+    const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+        if (ref.current) {
+            ref.current.scrollIntoView({ behavior: "smooth" });
+        }
     };
 
     return (

@@ -1,4 +1,4 @@
-import { useMemo, forwardRef, RefObject, ReactNode } from "react";
+import { useMemo, forwardRef, RefObject } from "react";
 import { Link } from "react-router-dom";
 import { motion, Variants, InertiaOptions } from "framer-motion";
 import { ArrowsOutSimple, Icon } from "@phosphor-icons/react";
@@ -14,7 +14,6 @@ interface Project {
     accent?: string;
     theme?: string;
     Icon?: Icon;
-    content?: ReactNode;
     dragConstraints?: RefObject<HTMLDivElement>; // Add dragConstraints to the interface
 }
 
@@ -28,7 +27,6 @@ const Card = forwardRef<HTMLDivElement, Project>(
         color = "#000000",
         accent = "#ADD8E6",
         Icon = ArrowsOutSimple,
-        content,
         dragConstraints, // Add dragConstraints to the destructured props
         ...rest
     }) => {
