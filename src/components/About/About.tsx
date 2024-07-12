@@ -11,25 +11,33 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
             id: "1",
             title: "I have a strong passion for mathematics and its applications in real-world problems.",
             description: "Math Enthusiast",
-            url: "https://www.mathway.com",
+            onClick: () => {
+                window.open("https://www.mathway.com", "_blank");
+            },
         },
         {
             id: "2",
             title: "With a solid foundation in computer science, I excel in developing efficient and scalable software solutions.",
             description: "Coding Expert",
-            url: "https://www.github.com",
+            onClick: () => {
+                window.open("https://www.github.com", "_blank");
+            },
         },
         {
             id: "3",
             title: "Exploring new cultures and experiencing the beauty of our world is a significant part of my life.",
             description: "Travel Adventurer",
-            url: "https://www.lonelyplanet.com",
+            onClick: () => {
+                window.open("https://www.lonelyplanet.com", "_blank");
+            },
         },
         {
             id: "4",
             title: "I appreciate the art of cooking and trying new cuisines, always on the lookout for unique flavors and ingredients.",
             description: "Food Connoisseur",
-            url: "https://www.foodnetwork.com",
+            onClick: () => {
+                window.open("https://www.foodnetwork.com", "_blank");
+            },
         },
     ];
 
@@ -46,7 +54,7 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
                             id={card.id}
                             title={card.title}
                             description={card.description}
-                            url={card.url}
+                            onclick={card.onClick}
                         />
                     ))}
                 </div>

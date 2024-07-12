@@ -13,6 +13,11 @@
     z-index: 1;
 }
 
+.card-description:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .card:focus-within {
     z-index: 2 !important;
 }

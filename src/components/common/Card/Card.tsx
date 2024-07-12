@@ -1,5 +1,4 @@
 import { useMemo, forwardRef, RefObject } from "react";
-import { Link } from "react-router-dom";
 import { motion, Variants, InertiaOptions } from "framer-motion";
 import { ArrowsOutSimple, Icon } from "@phosphor-icons/react";
 
@@ -9,7 +8,7 @@ interface Project {
     id: string;
     title: string;
     description: string;
-    url: string;
+    onclick: () => void;
     color?: string;
     accent?: string;
     theme?: string;
@@ -17,13 +16,14 @@ interface Project {
     dragConstraints?: RefObject<HTMLDivElement>; // Add dragConstraints to the interface
 }
 
-const dragTransition: InertiaOptions = { timeConstant: 50, power: 0 };
+const dragTransition: InertiaOptions = { timeConstant: 50, power: 0.1 };
 
 const Card = forwardRef<HTMLDivElement, Project>(
     ({
         id,
         title,
         description,
+        onclick,
         color = "#000000",
         accent = "#ADD8E6",
         Icon = ArrowsOutSimple,
@@ -71,9 +71,9 @@ const Card = forwardRef<HTMLDivElement, Project>(
                     {...rest}
                 >
                     <Icon size={32} />
-                    <Link to={`${id}`}>
-                        <h2>{description}</h2>
-                    </Link>
+                    <h2 onClick={onclick} className="card-description">
+                        {description}
+                    </h2>
                     <p style={{ flex: 1 }}>{title}</p>
                 </motion.div>
             </div>
