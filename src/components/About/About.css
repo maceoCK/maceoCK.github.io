@@ -3,7 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffeed3;
+    background-color: #ffe7c4;
+    border: 2px solid #000;
     width: 100%;
     height: 40vw;
     border-radius: 20px;
@@ -18,7 +19,7 @@
 
 .bulletin-container {
     position: relative;
-    
+    border: 2px solid #000;
     width: 90%;
     height: 90%;
     margin: 30px;

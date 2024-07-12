@@ -2,11 +2,8 @@ import MaceoProfile from "../../assets/Maceo.jpeg";
 import "./Home.css";
 import { Button } from "@mui/material";
 
-interface HomeProps {
-    topRef: React.RefObject<HTMLDivElement>;
-}
 
-const App: React.FC<HomeProps> = ({ topRef }) => {
+const App: React.FC = () => {
     return (
         <div>
             <div className="info-container">
@@ -17,13 +14,13 @@ const App: React.FC<HomeProps> = ({ topRef }) => {
 
                     <p>I'm a full stack developer with a passion for creating user-friendly and efficient web applications.</p>
                     <div className="button-container">
-                        <Button variant="outlined" href="https://www.linkedin.com/in/maceo-cardinale-kwik/" target="_blank" style={{ borderRadius: 100, border: "2px solid black", color: "black" }}>
+                        <Button variant="outlined" size="large" href="https://www.linkedin.com/in/maceo-cardinale-kwik/" target="_blank" style={{ borderRadius: 100, border: "2px solid black", color: "black" }}>
                             LinkedIn
                         </Button>
-                        <Button variant="outlined" style={{ borderRadius: 100, border: "2px solid black", color: "black" }}>
+                        <Button variant="outlined" size="large" href="https://github.com/maceoCK" target="_blank" style={{ borderRadius: 100, border: "2px solid black", color: "black" }}>
                             GitHub
                         </Button>
-                        <Button variant="outlined" style={{ borderRadius: 100, border: "2px solid black", color: "black" }}>
+                        <Button variant="outlined" size="large" style={{ borderRadius: 100, border: "2px solid black", color: "black" }}>
                             Resume
                         </Button>
                     </div>

@@ -19,8 +19,16 @@ const Header: React.FC<HeaderProps> = ({ aboutRef, projectsRef, contactRef, topR
                     MACEO CARDINALE KWIK
                 </div>
                 <div style={{ display: 'flex', gap: '20px', fontSize: '20px', alignItems: 'center' }}>
-                    <Button className="button" onClick={() => scrollToRef(aboutRef)} style={{ color: 'black', backgroundColor: 'paleblue' }}>About</Button>
-                    <Button className="button" onClick={() => scrollToRef(projectsRef)} style={{ color: 'black', backgroundColor: 'paleblue' }}>Projects</Button>
+                    <Button className="button" onClick={() => {
+                        if (aboutRef.current) {
+                            window.scrollTo({ top: aboutRef.current.offsetTop - 100, behavior: 'smooth' });
+                        }
+                    }} style={{ color: 'black', backgroundColor: 'paleblue' }}>About</Button>
+                    <Button className="button" onClick={() => {
+                        if (projectsRef.current) {
+                            window.scrollTo({ top: projectsRef.current.offsetTop - 100, behavior: 'smooth' });
+                        }
+                    }} style={{ color: 'black', backgroundColor: 'paleblue' }}>Projects</Button>
                     <Button className="button" onClick={() => scrollToRef(contactRef)} variant="outlined" color="primary" style={{ border: '2px solid black', borderRadius: '10px', color: 'black' }}>Contact</Button>
                 </div>
             </Toolbar>

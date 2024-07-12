@@ -1,17 +1,17 @@
 .buttonBorder1 {
-    border: 1px solid #000;
+    border: 2px solid #ADD8E6;
     border-radius: 10px;
     padding: 4px;
 }
 
 .buttonBorder2 {
-    border: 1px solid #000;
+    border: 2px solid #4db0d2;
     border-radius: 10px;
     padding: 4px;
 }
 
 .buttonBorder3 {
-    border: 1px solid #000;
+    border: 2px solid #4db0d2;
     border-radius: 10px;
     padding: 4px;
 }
@@ -19,4 +19,12 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
