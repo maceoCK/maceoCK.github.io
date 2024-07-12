@@ -1,9 +1,8 @@
-import React from 'react';
-import { Button } from '@mui/material';
-import { InstagramLogo, LinkedinLogo, GithubLogo } from '@phosphor-icons/react';
-import UFO from '../../assets/alien-ufo.png';
-import './Contact.css';
-
+import React from "react";
+import { Button } from "@mui/material";
+import { InstagramLogo, LinkedinLogo, GithubLogo } from "@phosphor-icons/react";
+import UFO from "../../assets/alien-ufo.png";
+import "./Contact.css";
 
 interface ContactProps {
     contactRef: React.RefObject<HTMLDivElement>;
@@ -13,19 +12,19 @@ const socialMedia = [
     {
         name: "Instagram",
         link: "https://www.instagram.com/maceo.c.k/",
-        icon: InstagramLogo
+        icon: InstagramLogo,
     },
     {
         name: "LinkedIn",
         link: "https://www.linkedin.com/in/maceo-cardinale-kwik/",
-        icon: LinkedinLogo
+        icon: LinkedinLogo,
     },
     {
         name: "GitHub",
         link: "https://github.com/maceoCK",
-        icon: GithubLogo
-    }
-]
+        icon: GithubLogo,
+    },
+];
 
 const Contact: React.FC<ContactProps> = ({ contactRef }) => {
     return (
@@ -38,8 +37,16 @@ const Contact: React.FC<ContactProps> = ({ contactRef }) => {
                         <div className="buttonBorder1">
                             <div className="buttonBorder2">
                                 <div className="buttonBorder3">
-                                    <Button key={media.name} variant="text" href={media.link} target="_blank" style={{ color: '#2d60a2' }}>
-                                        {React.createElement(media.icon, { size: 32 })}
+                                    <Button
+                                        key={media.name}
+                                        variant="text"
+                                        href={media.link}
+                                        target="_blank"
+                                        style={{ color: "#2d60a2" }}
+                                    >
+                                        {React.createElement(media.icon, {
+                                            size: 32,
+                                        })}
                                         {media.name}
                                     </Button>
                                 </div>

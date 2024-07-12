@@ -24,7 +24,7 @@
     height: 90%;
     margin: 30px;
     margin-top: 0;
-    background-image: url('../../assets/cork.jpg');
+    background-image: url("../../assets/cork.jpg");
     background-size: cover;
     border-radius: 20px;
 }

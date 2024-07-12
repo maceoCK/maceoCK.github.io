@@ -4,8 +4,8 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/common/Footer/Footer";
-import { useRef } from 'react';
-import './App.css';
+import { useRef } from "react";
+import "./App.css";
 
 const App = () => {
     const aboutRef = useRef(null);
@@ -16,7 +16,12 @@ const App = () => {
     return (
         <div className="background">
             <div ref={topRef}></div>
-            <Header aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} topRef={topRef} />
+            <Header
+                aboutRef={aboutRef}
+                projectsRef={projectsRef}
+                contactRef={contactRef}
+                topRef={topRef}
+            />
             <div className="container">
                 <Home />
                 <About aboutRef={aboutRef} />
@@ -26,6 +31,6 @@ const App = () => {
             <Footer />
         </div>
     );
-}
+};
 
 export default App;

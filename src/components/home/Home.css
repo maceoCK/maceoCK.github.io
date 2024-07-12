@@ -1,4 +1,4 @@
-.info-container { 
+.info-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,7 +33,7 @@
 }
 
 .profile-image-border-1 {
-    border: 2px solid #ADD8E6;
+    border: 2px solid #add8e6;
     min-width: 260px;
     border-radius: 10%;
     padding: 10px;
