@@ -1,37 +1,40 @@
-.header-container {
-    .Link {
-        text-decoration: none;
-        color: black;
-    }
+.Link {
+    text-decoration: none;
+    color: black;
+}
 
-    .title-container {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        font-weight: bold;
-        flex-grow: 1;
-    }
+.title-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    flex-grow: 1;
+}
 
+.title {
+    font-size: calc(1.2vw + 10px);
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.button-container {
+    display: flex;
+    gap: calc(0.1vw + 4px);
+    font-size: calc(1.2vw + 10px);
+    align-items: center;
+}
+
+.button {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 1368px) {
     .title {
-        font-size: calc(
-            1.2vw + 10px
-        ); /* Dynamically resizes with window size */
-        font-weight: bold;
-        text-decoration: none;
-        color: black;
+        font-size: 24px;
     }
-
-    .button-container {
-        display: flex;
-        gap: calc(0.1vw + 4px);
-        font-size: calc(1.2vw + 10px);
-        align-items: center;
-    }
-
-    .button {
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        color: black;
-    }
+    
 }

@@ -16,10 +16,26 @@ const Header: React.FC<HeaderProps> = ({
     topRef,
 }: HeaderProps) => {
     const [buttonSize, setButtonSize] = useState<ButtonProps["size"]>("large");
+    const [buttonStyle, setButtonStyle] = useState<ButtonProps["style"]>({});
 
     useEffect(() => {
         const handleResize = () => {
             setButtonSize(window.outerWidth > 968 ? "large" : "small");
+            setButtonStyle(
+                window.outerWidth < 1368
+                    ? {
+                          border: "2px solid black",
+                          borderRadius: "10px",
+                          color: "black",
+                          fontSize: "calc(0.5vw + 10px)",
+                      }
+                    : {
+                          border: "2px solid black",
+                          borderRadius: "10px",
+                          color: "black",
+                          fontSize: "20px",
+                      }
+            );
         };
 
         window.addEventListener("resize", handleResize);
@@ -68,12 +84,7 @@ const Header: React.FC<HeaderProps> = ({
                                     });
                                 }
                             }}
-                            style={{
-                                color: "black",
-                                backgroundColor: "paleblue",
-                                fontSize:
-                                    "calc(0.5vw + 10px)" /* Dynamically resizes with window size */,
-                            }}
+                            style={buttonStyle}
                             size={buttonSize}
                         >
                             About
@@ -89,12 +100,7 @@ const Header: React.FC<HeaderProps> = ({
                                     });
                                 }
                             }}
-                            style={{
-                                color: "black",
-                                backgroundColor: "paleblue",
-                                fontSize:
-                                    "calc(0.5vw + 10px)" /* Dynamically resizes with window size */,
-                            }}
+                            style={buttonStyle}
                             size={buttonSize}
                         >
                             Projects
@@ -111,13 +117,7 @@ const Header: React.FC<HeaderProps> = ({
                             }}
                             variant="outlined"
                             color="primary"
-                            style={{
-                                border: "2px solid black",
-                                borderRadius: "10px",
-                                color: "black",
-                                fontSize:
-                                    "calc(0.5vw + 10px)" /* Dynamically resizes with window size */,
-                            }}
+                            style={buttonStyle}
                             size={buttonSize}
                         >
                             Contact

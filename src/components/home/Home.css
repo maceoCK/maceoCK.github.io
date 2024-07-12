@@ -53,13 +53,17 @@
 }
 
 .info-title {
-    font-size: calc(3vw + 10px);
+    font-size: calc(2.5vw + 5px);
     font-weight: bold;
 }
 
 .info-subtitle {
     font-size: calc(1vw + 10px);
     font-weight: bold;
+}
+
+.name-highlight {
+    color: #266e86;
 }
 
 .hello {
@@ -72,21 +76,35 @@
 
 @media (max-width: 968px) {
     .home-container {
-        padding: 0 10px; /* Adjust padding for mobile */
+        padding: 0 10px;
     }
 
     .info-container {
-        flex-direction: column-reverse; /* Stack items vertically on mobile */
+        flex-direction: column-reverse;
         align-items: center;
     }
 
     .profile-image-container {
-        width: 100%; /* Full width on mobile */
-        margin-left: 0; /* Remove left margin on mobile */
+        width: 100%;
+        margin-left: 0;
     }
 
     .home-button-container {
         flex-direction: column;
-        justify-content: center; /* Center buttons on mobile */
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1368px) {
+    .info-title {
+        font-size: 400%;
+    }
+
+    .info-subtitle {
+        font-size: 40px;
+    }
+
+    .info-description {
+        font-size: 20px;
     }
 }

@@ -50,3 +50,13 @@
         height: 90vw;
     }
 }
+
+@media (min-width: 1368px) {
+    .bulletin-board {
+        height: 650px;
+    }
+
+    .bulletin-board-title-text {
+        font-size: 32px;
+    }
+}

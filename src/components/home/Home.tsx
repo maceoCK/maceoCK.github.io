@@ -26,7 +26,7 @@ const App: React.FC = () => {
                 <div className="info">
                     <h1 className="info-title hello">Hello 👋</h1>
                     <h1 className="info-title name">
-                        I'm Maceo Cardinale Kwik
+                        I'm <span className="name-highlight">Maceo Cardinale Kwik</span>
                     </h1>
                     <h2 className="info-subtitle">
                         I hope you enjoy your stay at my website
