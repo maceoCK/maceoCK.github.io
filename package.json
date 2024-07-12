@@ -2,7 +2,7 @@
     "name": "personal-website",
     "private": true,
     "version": "0.0.0",
-    "homepage": "https://maceoCK.github.io/",
+    "homepage": "https://www.maceoCK.me",
     "type": "module",
     "scripts": {
         "dev": "vite",
