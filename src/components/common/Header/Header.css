@@ -13,7 +13,9 @@
     }
 
     .title {
-        font-size: calc(1.2vw + 10px); /* Dynamically resizes with window size */
+        font-size: calc(
+            1.2vw + 10px
+        ); /* Dynamically resizes with window size */
         font-weight: bold;
         text-decoration: none;
         color: black;
