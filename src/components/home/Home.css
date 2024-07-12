@@ -1,67 +1,92 @@
-.home-container {
-    .info-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+.info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.info-description {
+    font-size: calc(0.5vw + 10px);
+}
+
+.profile-image {
+    width: 100%;
+    border-radius: 10%;
+    height: auto;
+}
+
+.profile-image-container {
+    width: calc(20vw + 10px);
+    max-width: calc(20vw + 200px);
+    margin-left: calc(1vw + 10px);
+}
+
+.profile-image-border-3 {
+    border: 2px solid #4db0d2;
+    border-radius: 10%;
+    padding: calc(0.5vw + 5px);
+}
+
+.profile-image-border-2 {
+    border: 2px solid #4db0d2;
+    border-radius: 10%;
+    padding: calc(0.5vw + 5px);
+}
+
+.profile-image-border-1 {
+    border: 2px solid #add8e6;
+    border-radius: 10%;
+    padding: calc(0.5vw + 5px);
+}
+
+.home-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: calc(0.75vw + 2px);
+}
+
+.info-title {
+    font-size: calc(3vw + 10px);
+    font-weight: bold;
+}
+
+.info-subtitle {
+    font-size: calc(1vw + 10px);
+    font-weight: bold;
+}
+
+.hello {
+    margin-bottom: 0px;
+}
+
+.name {
+    margin-top: 0px;
+}
+
+@media (max-width: 968px) {
+    .home-container {
+        padding: 0 10px; /* Adjust padding for mobile */
     }
 
-    .profile-image {
-        width: 100%;
-        min-width: 200px;
-        border-radius: 10%;
-        height: auto;
+    .info-container {
+        flex-direction: column-reverse; /* Stack items vertically on mobile */
+        align-items: center;
     }
 
     .profile-image-container {
-        width: 40%;
-        min-width: 200px;
-        max-width: 400px;
-        margin-left: 20px;
+        width: 100%; /* Full width on mobile */
+        margin-left: 0; /* Remove left margin on mobile */
     }
 
-    .profile-image-border-3 {
-        border: 2px solid #4db0d2;
-        min-width: 220px;
-        border-radius: 10%;
-        padding: 10px;
-    }
-
-    .profile-image-border-2 {
-        border: 2px solid #4db0d2;
-        min-width: 240px;
-        border-radius: 10%;
-        padding: 10px;
-    }
-
-    .profile-image-border-1 {
-        border: 2px solid #add8e6;
-        min-width: 260px;
-        border-radius: 10%;
-        padding: 10px;
-    }
-
-    .button-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        gap: 10px;
-    }
-
-    .info-title {
-        font-size: 3.5rem;
-        font-weight: bold;
-    }
-
-    .info-subtitle {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-    .hello {
-        margin-bottom: 0px;
-    }
-
-    .name {
-        margin-top: 0px;
+    .home-button-container {
+        flex-direction: column;
+        justify-content: center; /* Center buttons on mobile */
     }
 }

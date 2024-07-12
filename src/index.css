@@ -4,4 +4,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #f7d7a7;
+    margin: 0;
+    padding: 0;
 }

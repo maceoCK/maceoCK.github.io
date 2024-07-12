@@ -40,3 +40,13 @@
     align-self: flex-start;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 10px; /* Adjust padding for mobile */
+    }
+
+    .bulletin-board {
+        height: 90vw;
+    }
+}

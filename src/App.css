@@ -2,8 +2,8 @@
     margin-top: 90px;
     display: flex;
     flex-direction: column;
-    margin-inline: 50px;
-    gap: 50px;
+    margin-inline: calc(0.5vw + 10px);
+    gap: calc(0.5vw + 10px);
 }
 
 .background {

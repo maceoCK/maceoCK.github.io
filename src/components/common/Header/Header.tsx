@@ -1,4 +1,5 @@
-import { AppBar, Toolbar, Button } from "@mui/material";
+import { AppBar, Toolbar, Button, ButtonProps } from "@mui/material";
+import { useEffect, useState } from "react";
 import "./Header.css";
 
 interface HeaderProps {
@@ -14,9 +15,25 @@ const Header: React.FC<HeaderProps> = ({
     contactRef,
     topRef,
 }) => {
+    const [buttonSize, setButtonSize] = useState<ButtonProps["size"]>("large");
+
+    useEffect(() => {
+        const handleResize = () => {
+            setButtonSize(window.outerWidth > 968 ? "large" : "small");
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        // Call handleResize initially in case the window size is already below 968px
+        handleResize();
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const scrollToRef = (ref: any) => {
         ref.current.scrollIntoView({ behavior: "smooth" });
     };
+
     return (
         <div className="header-container">
             <AppBar
@@ -52,7 +69,10 @@ const Header: React.FC<HeaderProps> = ({
                             style={{
                                 color: "black",
                                 backgroundColor: "paleblue",
+                                fontSize:
+                                    "calc(0.5vw + 10px)" /* Dynamically resizes with window size */,
                             }}
+                            size={buttonSize}
                         >
                             About
                         </Button>
@@ -70,7 +90,10 @@ const Header: React.FC<HeaderProps> = ({
                             style={{
                                 color: "black",
                                 backgroundColor: "paleblue",
+                                fontSize:
+                                    "calc(0.5vw + 10px)" /* Dynamically resizes with window size */,
                             }}
+                            size={buttonSize}
                         >
                             Projects
                         </Button>
@@ -83,7 +106,10 @@ const Header: React.FC<HeaderProps> = ({
                                 border: "2px solid black",
                                 borderRadius: "10px",
                                 color: "black",
+                                fontSize:
+                                    "calc(0.5vw + 10px)" /* Dynamically resizes with window size */,
                             }}
+                            size={buttonSize}
                         >
                             Contact
                         </Button>

@@ -21,8 +21,8 @@
 
     .button-container {
         display: flex;
-        gap: 20px;
-        font-size: 20px;
+        gap: calc(0.1vw + 4px);
+        font-size: calc(1.2vw + 10px);
         align-items: center;
     }
 
