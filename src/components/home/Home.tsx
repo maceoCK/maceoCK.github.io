@@ -3,18 +3,12 @@ import "./Home.css";
 import { Box, Button, IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
 import Radiation from "../common/Radiation/Radiation";
-import { Document, Page, pdfjs } from "react-pdf";
 import { Modal } from "@mui/material";
 import resume from "../../assets/Maceo_Cardinale_Kwiks_Resume.pdf";
 
 interface HomeProps {
     topRef: React.RefObject<HTMLDivElement>;
 }
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    "pdfjs-dist/build/pdf.worker.min.mjs",
-    import.meta.url
-).toString();
 
 const Home: React.FC<HomeProps> = ({ topRef }) => {
     const [buttonSize, setButtonSize] = useState<"large" | "small">("large");

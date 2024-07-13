@@ -72,7 +72,6 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
                     {cardsData.map((card) => (
                         <Card
                             key={card.id}
-                            id={card.id}
                             title={card.title}
                             description={card.description}
                             onclick={card.onClick}

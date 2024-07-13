@@ -41,7 +41,10 @@ const Contact: React.FC<ContactProps> = ({ contactRef }) => {
                                 variant="text"
                                 href={media.link}
                                 target="_blank"
-                                style={{ color: "#2d60a2", borderRadius: "60px"}}
+                                style={{
+                                    color: "#2d60a2",
+                                    borderRadius: "60px",
+                                }}
                             >
                                 {React.createElement(media.icon, {
                                     size: 32,

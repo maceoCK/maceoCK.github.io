@@ -5,7 +5,6 @@ import { ArrowsOutSimple, Icon } from "@phosphor-icons/react";
 import "./Card.css";
 
 interface Project {
-    id: string;
     title: string;
     description: string;
     onclick: () => void;
@@ -20,7 +19,6 @@ const dragTransition: InertiaOptions = { timeConstant: 50, power: 0.1 };
 
 const Card = forwardRef<HTMLDivElement, Project>(
     ({
-        id,
         title,
         description,
         onclick,

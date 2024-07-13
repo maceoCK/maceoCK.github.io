@@ -1,9 +1,7 @@
 import Home from "./components/home/Home";
-import Header from "./components/common/Header/Header";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
-import Footer from "./components/common/Footer/Footer";
 import "./App.css";
 
 interface AppProps {
@@ -14,8 +12,6 @@ interface AppProps {
 }
 
 const App = ({ topRef, aboutRef, projectsRef, contactRef }: AppProps) => {
-
-
     return (
         <div className="background">
             <div className="container">
