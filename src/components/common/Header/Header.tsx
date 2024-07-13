@@ -1,5 +1,7 @@
 import { AppBar, Toolbar, Button, ButtonProps } from "@mui/material";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./Header.css";
 
 interface HeaderProps {
@@ -15,6 +17,7 @@ const Header: React.FC<HeaderProps> = ({
     contactRef,
     topRef,
 }: HeaderProps) => {
+    const navigate = useNavigate();
     const [buttonSize, setButtonSize] = useState<ButtonProps["size"]>("large");
     const [buttonStyle, setButtonStyle] = useState<ButtonProps["style"]>({});
 
@@ -28,12 +31,14 @@ const Header: React.FC<HeaderProps> = ({
                           borderRadius: "10px",
                           color: "black",
                           fontSize: "calc(0.5vw + 10px)",
+                          fontWeight: "bold",
                       }
                     : {
                           border: "2px solid black",
                           borderRadius: "10px",
                           color: "black",
-                          fontSize: "20px",
+                          fontSize: "calc(0.25vh + 15px)",
+                          fontWeight: "bold",
                       }
             );
         };
@@ -47,8 +52,16 @@ const Header: React.FC<HeaderProps> = ({
     }, []);
 
     const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+        navigate("/", {
+            state: {
+                scrollToRef: ref?.current?.offsetTop,
+            },
+        });
         if (ref.current) {
-            ref.current.scrollIntoView({ behavior: "smooth" });
+            window.scrollTo({
+                top: ref.current.offsetTop - 100,
+                behavior: "smooth",
+            });
         }
     };
 
@@ -77,12 +90,7 @@ const Header: React.FC<HeaderProps> = ({
                         <Button
                             className="button"
                             onClick={() => {
-                                if (aboutRef.current) {
-                                    window.scrollTo({
-                                        top: aboutRef.current.offsetTop - 100,
-                                        behavior: "smooth",
-                                    });
-                                }
+                                scrollToRef(aboutRef);
                             }}
                             style={buttonStyle}
                             size={buttonSize}
@@ -91,15 +99,7 @@ const Header: React.FC<HeaderProps> = ({
                         </Button>
                         <Button
                             className="button"
-                            onClick={() => {
-                                if (projectsRef.current) {
-                                    window.scrollTo({
-                                        top:
-                                            projectsRef.current.offsetTop - 100,
-                                        behavior: "smooth",
-                                    });
-                                }
-                            }}
+                            onClick={() => scrollToRef(projectsRef)}
                             style={buttonStyle}
                             size={buttonSize}
                         >
@@ -107,14 +107,7 @@ const Header: React.FC<HeaderProps> = ({
                         </Button>
                         <Button
                             className="button"
-                            onClick={() => {
-                                if (contactRef.current) {
-                                    window.scrollTo({
-                                        top: contactRef.current.offsetTop,
-                                        behavior: "smooth",
-                                    });
-                                }
-                            }}
+                            onClick={() => scrollToRef(contactRef)}
                             variant="outlined"
                             color="primary"
                             style={buttonStyle}

@@ -4,31 +4,26 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/common/Footer/Footer";
-import { useRef } from "react";
 import "./App.css";
 
-const App = () => {
-    const aboutRef = useRef(null);
-    const projectsRef = useRef(null);
-    const contactRef = useRef(null);
-    const topRef = useRef(null);
+interface AppProps {
+    topRef: React.RefObject<HTMLDivElement>;
+    aboutRef: React.RefObject<HTMLDivElement>;
+    projectsRef: React.RefObject<HTMLDivElement>;
+    contactRef: React.RefObject<HTMLDivElement>;
+}
+
+const App = ({ topRef, aboutRef, projectsRef, contactRef }: AppProps) => {
+
 
     return (
         <div className="background">
-            <div ref={topRef}></div>
-            <Header
-                aboutRef={aboutRef}
-                projectsRef={projectsRef}
-                contactRef={contactRef}
-                topRef={topRef}
-            />
             <div className="container">
-                <Home />
+                <Home topRef={topRef} />
                 <About aboutRef={aboutRef} />
                 <Projects projectsRef={projectsRef} />
                 <Contact contactRef={contactRef} />
             </div>
-            <Footer />
         </div>
     );
 };

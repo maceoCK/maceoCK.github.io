@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import { InstagramLogo, LinkedinLogo, GithubLogo } from "@phosphor-icons/react";
 import UFO from "../../assets/alien-ufo.png";
 import "./Contact.css";
+import Radiation from "../common/Radiation/Radiation";
 
 interface ContactProps {
     contactRef: React.RefObject<HTMLDivElement>;
@@ -34,24 +35,20 @@ const Contact: React.FC<ContactProps> = ({ contactRef }) => {
                 <img src={UFO} alt="UFO" />
                 <div className="socialMediaContainer">
                     {socialMedia.map((media) => (
-                        <div className="buttonBorder1">
-                            <div className="buttonBorder2">
-                                <div className="buttonBorder3">
-                                    <Button
-                                        key={media.name}
-                                        variant="text"
-                                        href={media.link}
-                                        target="_blank"
-                                        style={{ color: "#2d60a2" }}
-                                    >
-                                        {React.createElement(media.icon, {
-                                            size: 32,
-                                        })}
-                                        {media.name}
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
+                        <Radiation gap={6} borderRadius={40}>
+                            <Button
+                                key={media.name}
+                                variant="text"
+                                href={media.link}
+                                target="_blank"
+                                style={{ color: "#2d60a2", borderRadius: "60px"}}
+                            >
+                                {React.createElement(media.icon, {
+                                    size: 32,
+                                })}
+                                {media.name}
+                            </Button>
+                        </Radiation>
                     ))}
                 </div>
             </div>

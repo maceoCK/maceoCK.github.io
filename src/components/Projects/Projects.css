@@ -8,4 +8,25 @@
         justify-content: center;
         align-items: center;
     }
+
+    .view-more-button {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .view-more-button:hover {
+        text-decoration: underline;
+    }
+
+    .view-more-text {
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    }
 }

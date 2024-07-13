@@ -1,18 +1,27 @@
 import "./About.css";
 import Card from "../common/Card/Card";
+import Popup from "../common/Popup/Popup";
+import { useState } from "react";
 
 interface AboutProps {
     aboutRef: React.RefObject<HTMLDivElement>;
 }
 
 const About: React.FC<AboutProps> = ({ aboutRef }) => {
+    const [open, setOpen] = useState(false);
+    const [title, setTitle] = useState("");
+    const [body, setBody] = useState("");
     const cardsData = [
         {
             id: "1",
             title: "I have a strong passion for mathematics and its applications in real-world problems.",
             description: "Math Enthusiast",
             onClick: () => {
-                window.open("https://www.mathway.com", "_blank");
+                setOpen(true);
+                setTitle("Mathway");
+                setBody(
+                    "Mathway is a website that allows you to plan your own travel. It is a great resource for anyone who wants to plan a trip."
+                );
             },
         },
         {
@@ -20,7 +29,11 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
             title: "With a solid foundation in computer science, I excel in developing efficient and scalable software solutions.",
             description: "Coding Expert",
             onClick: () => {
-                window.open("https://www.github.com", "_blank");
+                setOpen(true);
+                setTitle("GitHub");
+                setBody(
+                    "GitHub is a website that allows you to plan your own travel. It is a great resource for anyone who wants to plan a trip."
+                );
             },
         },
         {
@@ -28,7 +41,11 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
             title: "Exploring new cultures and experiencing the beauty of our world is a significant part of my life.",
             description: "Travel Adventurer",
             onClick: () => {
-                window.open("https://www.lonelyplanet.com", "_blank");
+                setOpen(true);
+                setTitle("Lonely Planet");
+                setBody(
+                    "Lonely Planet is a website that allows you to plan your own travel. It is a great resource for anyone who wants to plan a trip."
+                );
             },
         },
         {
@@ -36,7 +53,11 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
             title: "I appreciate the art of cooking and trying new cuisines, always on the lookout for unique flavors and ingredients.",
             description: "Food Connoisseur",
             onClick: () => {
-                window.open("https://www.foodnetwork.com", "_blank");
+                setOpen(true);
+                setTitle("Food Network");
+                setBody(
+                    "Food Network is a website that allows you to plan your own travel. It is a great resource for anyone who wants to plan a trip."
+                );
             },
         },
     ];
@@ -59,6 +80,12 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
                     ))}
                 </div>
             </div>
+            <Popup
+                open={open}
+                onClose={() => setOpen(false)}
+                title={title}
+                body={body}
+            />
         </div>
     );
 };

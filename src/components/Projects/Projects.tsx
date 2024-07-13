@@ -3,6 +3,9 @@ import { Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { ArrowRight } from "@phosphor-icons/react";
+import { useNavigate } from "react-router-dom";
+import Radiation from "../common/Radiation/Radiation";
 import "./Projects.css";
 
 interface Project {
@@ -42,6 +45,7 @@ const projectsData: Project[] = [
 const Projects: React.FC<{ projectsRef: React.RefObject<HTMLDivElement> }> = ({
     projectsRef,
 }) => {
+    const navigate = useNavigate();
     const projectRefs = useRef(
         projectsData.map(() => React.createRef<HTMLDivElement>())
     );
@@ -84,6 +88,17 @@ const Projects: React.FC<{ projectsRef: React.RefObject<HTMLDivElement> }> = ({
                     </Grid>
                 ))}
             </Grid>
+            <div className="view-more-container">
+                <Radiation gap={6} borderRadius={0}>
+                    <div
+                        className="view-more-button"
+                        onClick={() => navigate("/projects")}
+                    >
+                        <p className="view-more-text">View More</p>
+                        <ArrowRight weight="bold" size={24} />
+                    </div>
+                </Radiation>
+            </div>
         </div>
     );
 };
