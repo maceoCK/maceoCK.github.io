@@ -46,11 +46,13 @@ const Popup: React.FC<PopupProps> = ({ open, onClose, title, image, body }) => {
                 <Typography id="modal-modal-title" variant="h6" component="h2">
                     {title}
                 </Typography>
-                <img
-                    src={image}
-                    alt={title}
-                    style={{ width: "100%", marginTop: "10px" }}
-                />
+                {image && (
+                    <img
+                        src={image}
+                        alt={title}
+                        style={{ width: "100%", marginTop: "10px" }}
+                    />
+                )}
                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                     {body}
                 </Typography>

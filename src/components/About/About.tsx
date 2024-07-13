@@ -18,9 +18,11 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
             description: "Math Enthusiast",
             onClick: () => {
                 setOpen(true);
-                setTitle("Mathway");
+                setTitle(
+                    "I used to be a math double major before I transfered schools"
+                );
                 setBody(
-                    "Mathway is a website that allows you to plan your own travel. It is a great resource for anyone who wants to plan a trip."
+                    "I used to be a math double major before I transfered schools, and I still love it. I love math and its applications in real-world problems. I have done research and presented on cryptography in relation to hawking radiation and I am currently improving my skills in numerical analysis."
                 );
             },
         },
@@ -38,25 +40,25 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
         },
         {
             id: "3",
-            title: "Exploring new cultures and experiencing the beauty of our world is a significant part of my life.",
-            description: "Travel Adventurer",
+            title: "Exploring new cultures and experiencing the beauty of our world is a significant what has made me me.",
+            description: "Travel Enthusiast",
             onClick: () => {
                 setOpen(true);
-                setTitle("Lonely Planet");
+                setTitle("My parents put an emphasis on traveing while raising me");
                 setBody(
-                    "Lonely Planet is a website that allows you to plan your own travel. It is a great resource for anyone who wants to plan a trip."
+                    "My parents put an emphasis on traveing while raising me, and I still love it. I love to travel and to experience new cultures. I have visited many countries and I am always looking for new places to visit."
                 );
             },
         },
         {
             id: "4",
             title: "I appreciate the art of cooking and trying new cuisines, always on the lookout for unique flavors and ingredients.",
-            description: "Food Connoisseur",
+            description: "Amateur Chef",
             onClick: () => {
                 setOpen(true);
-                setTitle("Food Network");
+                setTitle("My family is very supportive and always on the lookout for unique flavors and ingredients.");
                 setBody(
-                    "Food Network is a website that allows you to plan your own travel. It is a great resource for anyone who wants to plan a trip."
+                    "My family is very supportive and always on the lookout for unique flavors and ingredients. We always try new things and I am always looking for new recipes to try."
                 );
             },
         },
