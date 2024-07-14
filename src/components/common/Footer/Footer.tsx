@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             >
                 <Toolbar style={{ justifyContent: "left" }}>
                     <p style={{ color: "black", fontSize: "12px" }}>
-                        © 2023 Maceo Cardinale Kwik. All rights reserved.
+                        © 2024 Maceo Cardinale Kwik. All rights reserved.
                     </p>
                 </Toolbar>
             </AppBar>
