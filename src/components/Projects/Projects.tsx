@@ -63,7 +63,7 @@ const Projects: React.FC<{ projectsRef: React.RefObject<HTMLDivElement> }> = ({
                         key={project.id}
                         ref={projectRefs.current[index]}
                     >
-                        <Card style={{ margin: "10px" }}>
+                        <Card style={{ margin: "10px" }} className="project-card">
                             <div
                                 className="project-card-background"
                                 style={{ backgroundColor: "#ffe7c4" }}
@@ -89,13 +89,15 @@ const Projects: React.FC<{ projectsRef: React.RefObject<HTMLDivElement> }> = ({
                 ))}
             </Grid>
             <div className="view-more-container">
-                <Radiation gap={6} borderRadius={0}>
+                <Radiation gap={6} borderRadius={15}>
                     <div
                         className="view-more-button"
                         onClick={() => navigate("/projects")}
                     >
-                        <p className="view-more-text">View More</p>
-                        <ArrowRight weight="bold" size={24} />
+                        <div className="view-more-content">
+                            <p className="view-more-text">View More</p>
+                            <ArrowRight weight="bold" size={24} />
+                        </div>
                     </div>
                 </Radiation>
             </div>

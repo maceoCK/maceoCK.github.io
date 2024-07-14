@@ -36,7 +36,19 @@ const Home: React.FC<HomeProps> = ({ topRef }) => {
                     <h1 className="info-title name">
                         I'm{" "}
                         <span className="name-highlight">
-                            Maceo Cardinale Kwik
+                            {"Maceo Cardinale Kwik"
+                                .split("")
+                                .map((char, index) =>
+                                    char === " " ? (
+                                        <span key={index} className="letter">
+                                            &nbsp;
+                                        </span>
+                                    ) : (
+                                        <span key={index} className="letter">
+                                            {char}
+                                        </span>
+                                    )
+                                )}
                         </span>
                     </h1>
                     <h2 className="info-subtitle">

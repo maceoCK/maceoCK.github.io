@@ -9,3 +9,25 @@
 .radiation-border-1 {
     border: 2px solid #add8e6;
 }
+
+@keyframes breathe {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.radiation-container:hover .radiation-border-3 {
+    animation: breathe 6s 0s;
+}
+
+.radiation-container:hover .radiation-border-2 {
+    animation: breathe 6s 0.1s;
+}
+
+.radiation-container:hover .radiation-border-1 {
+    animation: breathe 6s  0.2s;
+}
